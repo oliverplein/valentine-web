@@ -152,7 +152,7 @@ export default function Home() {
             fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
           }}
         >
-          💕💕💕 Welcome to the MOST IMPORTANT page on the internet!!! 💕💕💕
+          💕💕💕 Chloé, welcome to the MOST IMPORTANT page on the internet!!! 💕💕💕
           Please answer the question below!!! 💕💕💕
         </div>
       </div>
@@ -181,7 +181,7 @@ export default function Home() {
           lineHeight: 1.3,
         }}
       >
-        Will You Be My Valentine?
+        Chloé, will You Be My Valentine?
       </h1>
 
       {/* Blinking subtitle */}
