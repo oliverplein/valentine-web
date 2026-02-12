@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+body {
+  background: #ff69b4;
+  color: #ffffff;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><text y='28' font-size='28'>💘</text></svg>")
+      0 0,
+    auto;
+  overflow-x: hidden;
+  min-height: 100vh;
+  margin: 0;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    color: #ff0000;
+  }
+  16% {
+    color: #ff8800;
+  }
+  33% {
+    color: #ffff00;
+  }
+  50% {
+    color: #00ff00;
+  }
+  66% {
+    color: #0088ff;
+  }
+  83% {
+    color: #ff00ff;
+  }
+  100% {
+    color: #ff0000;
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes spin-heart {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
