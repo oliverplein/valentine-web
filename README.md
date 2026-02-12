@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# valentine-web
 
-## Getting Started
+A retro late-90s/early-2000s "Will you be my Valentine?" page. Features a big YES button, and No/Maybe buttons that run away from the cursor so they can never be clicked.
 
-First, run the development server:
+## URL Parameters
+
+Personalize the page by passing `from` and `to` as query parameters:
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| `to` | The name of the person being asked | `You` |
+| `from` | The name of the person asking | `Someone` |
+
+Example: `https://your-domain.com/?from=Oli&to=Chlo%C3%A9`
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Docker
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Build and run locally:
 
-## Learn More
+```bash
+docker build -t valentine-web .
+docker run -p 3000:3000 valentine-web
+```
 
-To learn more about Next.js, take a look at the following resources:
+A GitHub Actions workflow is included to build and push the image to `ghcr.io`. It is configured for manual triggering via `workflow_dispatch` — run it from the Actions tab or with:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+gh workflow run "Build and Push to GHCR"
+```
