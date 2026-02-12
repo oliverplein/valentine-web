@@ -77,7 +77,7 @@ function Valentine() {
         </div>
         <h1
           style={{
-            fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+            fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
             fontSize: "48px",
             color: "#ffff00",
             textShadow:
@@ -89,7 +89,7 @@ function Valentine() {
         </h1>
         <p
           style={{
-            fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+            fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
             fontSize: "28px",
             color: "#ffffff",
             textShadow: "2px 2px #cc0066",
@@ -121,7 +121,7 @@ function Valentine() {
               animation: "marquee 10s linear infinite",
               color: "#ffff00",
               fontSize: "16px",
-              fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+              fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
             }}
           >
             💕💕💕 You just made {from.toUpperCase()} very happy!!! 💕💕💕 Happy
@@ -162,7 +162,7 @@ function Valentine() {
             animation: "marquee 15s linear infinite",
             color: "#ffff00",
             fontSize: "16px",
-            fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+            fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
           }}
         >
           💕💕💕 {to}, welcome to the MOST IMPORTANT page on the internet!!! 💕💕💕
@@ -184,7 +184,7 @@ function Valentine() {
       {/* Title */}
       <h1
         style={{
-          fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+          fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
           fontSize: "clamp(32px, 6vw, 56px)",
           color: "#ffff00",
           textShadow:
@@ -230,7 +230,7 @@ function Valentine() {
           color: "#ffff00",
           border: "4px outset #ff6666",
           padding: "18px 50px",
-          fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+          fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
           fontSize: "28px",
           fontWeight: "bold",
           cursor: "pointer",
@@ -255,7 +255,7 @@ function Valentine() {
           color: "#333333",
           border: "3px outset #d0d0d0",
           padding: "15px 40px",
-          fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+          fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
           fontSize: "22px",
           fontWeight: "bold",
           cursor: "pointer",
@@ -282,7 +282,7 @@ function Valentine() {
           color: "#333333",
           border: "3px outset #d0d0d0",
           padding: "15px 40px",
-          fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+          fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
           fontSize: "22px",
           fontWeight: "bold",
           cursor: "pointer",
@@ -345,7 +345,7 @@ function Valentine() {
             animation: "marquee 12s linear infinite",
             color: "#ffff00",
             fontSize: "16px",
-            fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
+            fontFamily: '"Comic Sans MS", "Comic Sans", var(--font-comic), cursive',
           }}
         >
           💌💌💌 Made with ❤️ and HTML by your favourite {from.toUpperCase()} 💌💌💌 Sign my guestbook (aka my HEART)!!! 💌💌💌
