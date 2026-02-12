@@ -1,8 +1,21 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { Suspense, useState, useCallback, useRef, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
+  return (
+    <Suspense>
+      <Valentine />
+    </Suspense>
+  );
+}
+
+function Valentine() {
+  const searchParams = useSearchParams();
+  const from = searchParams.get("from") || "Someone";
+  const toRaw = searchParams.get("to") || "You";
+  const to = toRaw.charAt(0).toUpperCase() + toRaw.slice(1);
   const [noPos, setNoPos] = useState({ x: 0, y: 0 });
   const [maybePos, setMaybePos] = useState({ x: 0, y: 0 });
   const [noInitialized, setNoInitialized] = useState(false);
@@ -111,7 +124,7 @@ export default function Home() {
               fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
             }}
           >
-            💕💕💕 You just made YOUR FUTURE HUSBAND very happy!!! 💕💕💕 Happy
+            💕💕💕 You just made {from.toUpperCase()} very happy!!! 💕💕💕 Happy
             Valentine&apos;s Day 2026!!! 💕💕💕
           </div>
         </div>
@@ -152,7 +165,7 @@ export default function Home() {
             fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
           }}
         >
-          💕💕💕 Chloé, welcome to the MOST IMPORTANT page on the internet!!! 💕💕💕
+          💕💕💕 {to}, welcome to the MOST IMPORTANT page on the internet!!! 💕💕💕
           Please answer the question below!!! 💕💕💕
         </div>
       </div>
@@ -181,7 +194,7 @@ export default function Home() {
           lineHeight: 1.3,
         }}
       >
-        Chloé, will You Be My Valentine?
+        {to}, will You Be My Valentine?
       </h1>
 
       {/* Blinking subtitle */}
@@ -335,7 +348,7 @@ export default function Home() {
             fontFamily: '"Comic Sans MS", "Comic Sans", cursive',
           }}
         >
-          💌💌💌 Made with ❤️ and HTML by your favourite OLI 💌💌💌 Sign my guestbook (aka my HEART)!!! 💌💌💌
+          💌💌💌 Made with ❤️ and HTML by your favourite {from.toUpperCase()} 💌💌💌 Sign my guestbook (aka my HEART)!!! 💌💌💌
         </div>
       </div>
     </div>
