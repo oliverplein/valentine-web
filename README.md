@@ -11,7 +11,7 @@ Personalize the page by passing `from` and `to` as query parameters:
 | `to` | The name of the person being asked | `You` |
 | `from` | The name of the person asking | `Someone` |
 
-Example: `https://your-domain.com/?from=Oli&to=Chlo%C3%A9`
+Example: `https://your-domain.com/?from=Brad&to=Alison
 
 ## Development
 
